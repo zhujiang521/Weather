@@ -9,5 +9,26 @@
       or implied. See the License for the specific language governing permissions and limitations under
       the License.
       -->
-    <string name="app_name">AndroidDevChallenge</string>
+    <string name="app_name">PlayWeather</string>
+
+    <string name="weather_sunny">Sunny</string>
+    <string name="weather_cloudy">Cloudy</string>
+    <string name="weather_overcast">Overcast</string>
+    <string name="weather_small_rain">Small rain</string>
+    <string name="weather_mid_rain">Mid rain</string>
+    <string name="weather_big_rain">Big rain</string>
+
+    <string name="weather_rainstorm">Rainstorm</string>
+    <string name="weather_small_snow">Small snow</string>
+
+    <string name="weather_mid_snow">Mid snow</string>
+    <string name="weather_big_snow">Big snow</string>
+    <string name="weather_snowstorm">Snowstorm</string>
+    <string name="weather_foggy">Foggy</string>
+
+    <string name="weather_ice">Ice</string>
+    <string name="weather_haze">Haze</string>
+
+    <string name="weather_air_quality">Air quality</string>
+
 </resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item
+        android:drawable="@drawable/n_weather_icon_big_rain"
+        android:duration="222" />
+    <item
+        android:drawable="@drawable/n_weather_icon_big_rain_big"
+        android:duration="222" />
+    <item
+        android:drawable="@drawable/n_weather_icon_big_rain_screen"
+        android:duration="222" />
+    <item
+        android:drawable="@drawable/n_weather_icon_cloud_big"
+        android:duration="222" />
+</animation-list>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">玩天气</string>
+    <string name="weather_sunny">晴</string>
+	<string name="weather_cloudy">多云</string>
+	<string name="weather_overcast">阴</string>
+    <string name="weather_small_rain">小雨</string>
+	<string name="weather_mid_rain">中雨</string>
+	<string name="weather_big_rain">大雨</string>
+
+	<string name="weather_rainstorm">暴雨</string>
+    <string name="weather_small_snow">小雪</string>
+
+	<string name="weather_mid_snow">中雪</string>
+	<string name="weather_big_snow">大雪</string>
+	<string name="weather_snowstorm">暴风雪</string>
+	<string name="weather_foggy">雾</string>
+
+    <string name="weather_ice">结冰</string>
+	<string name="weather_haze">阴霾</string>
+
+	<string name="weather_air_quality">空气质量</string>
+
+</resources>
