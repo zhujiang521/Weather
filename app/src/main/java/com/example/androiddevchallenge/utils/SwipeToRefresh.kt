@@ -16,7 +16,6 @@
 
 package com.example.androiddevchallenge.utils
 
-import android.util.Log
 import android.widget.ProgressBar
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.compose.foundation.gestures.Orientation
@@ -46,8 +45,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import com.example.androiddevchallenge.R
 import kotlin.math.roundToInt
-
-private const val TAG = "SwipeToRefreshLayout"
 
 private val RefreshDistance = 50.dp
 
@@ -110,10 +107,8 @@ fun SwipeToRefreshLayout(
 private val <T> SwipeableState<T>.PreUpPostDownNestedScrollConnection: NestedScrollConnection
     get() = object : NestedScrollConnection {
         override fun onPreScroll(available: Offset, source: NestedScrollSource): Offset {
-            Log.d(TAG, "onPreScroll: available:$available   source:$source")
             val delta = available.toFloat()
             return if (delta < 0 && source == NestedScrollSource.Drag) {
-                Log.e(TAG, "onPreScroll111: delta:$delta")
                 performDrag(delta).toOffset()
             } else {
                 Offset.Zero
@@ -125,9 +120,7 @@ private val <T> SwipeableState<T>.PreUpPostDownNestedScrollConnection: NestedScr
             available: Offset,
             source: NestedScrollSource
         ): Offset {
-            Log.d(TAG, "onPostScroll: consumed:$consumed   available:$available   source:$source ")
             return if (source == NestedScrollSource.Drag) {
-                Log.e(TAG, "onPostScroll111: available:$available" )
                 performDrag(available.toFloat()).toOffset()
             } else {
                 Offset.Zero
@@ -136,13 +129,11 @@ private val <T> SwipeableState<T>.PreUpPostDownNestedScrollConnection: NestedScr
 
         override suspend fun onPreFling(available: Velocity): Velocity {
             val toFling = Offset(available.x, available.y).toFloat()
-            Log.d(TAG, "onPreFling: available$available")
             return if (toFling < 0) {
-                Log.e(TAG, "onPreFling111: $toFling")
                 performFling(velocity = toFling)
                 // since we go to the anchor with tween settling, consume all for the best UX
-                // available
-                Velocity.Zero
+                available
+                //Velocity.Zero
             } else {
                 Velocity.Zero
             }
@@ -152,7 +143,6 @@ private val <T> SwipeableState<T>.PreUpPostDownNestedScrollConnection: NestedScr
             consumed: Velocity,
             available: Velocity
         ): Velocity {
-            Log.e(TAG, "onPostFling: consumed:$consumed   available:$available")
             performFling(velocity = Offset(available.x, available.y).toFloat())
             return Velocity.Zero
         }

@@ -34,6 +34,14 @@ fun getWeatherIcon(weatherId: Int): Int {
     return R.drawable.n_weather_icon_na
 }
 
+val cityArray = arrayListOf(
+    R.string.city_new_york,
+    R.string.city_los_angeles,
+    R.string.city_chicago,
+    R.string.city_houston,
+    R.string.city_san_francisco,
+)
+
 object WeatherType {
 
     /**

@@ -1,9 +1,12 @@
 package com.example.androiddevchallenge
 
 import android.util.Log
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
@@ -26,12 +29,14 @@ import com.example.androiddevchallenge.utils.SwipeToRefreshLayout
 import com.example.androiddevchallenge.weather.WeatherBackground
 import com.example.androiddevchallenge.weather.WeatherBasic
 import com.example.androiddevchallenge.weather.WeatherDetails
+import com.example.androiddevchallenge.weather.WeatherOther
 import com.example.androiddevchallenge.weather.WeatherWeek
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 private const val TAG = "WeatherPage"
 
+@ExperimentalAnimationApi
 @Composable
 fun WeatherPage() {
     val coroutineScope = rememberCoroutineScope()
@@ -64,20 +69,24 @@ fun WeatherPage() {
     }
 }
 
+@ExperimentalAnimationApi
 @Composable
 fun WeatherContent(weather: Weather) {
+    val scrollState = rememberScrollState()
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(top = 100.dp)
-            .padding(horizontal = 10.dp),
+            .padding(horizontal = 10.dp)
+            .verticalScroll(scrollState),
     ) {
-        WeatherBasic(weather)
+        WeatherBasic(weather,scrollState)
         WeatherDetails(weather)
         WeatherWeek(weather)
+        WeatherOther(weather)
     }
 }
 
+@ExperimentalAnimationApi
 @Preview("Light Theme", widthDp = 360, heightDp = 640)
 @Composable
 fun LightPreview() {
@@ -86,6 +95,7 @@ fun LightPreview() {
     }
 }
 
+@ExperimentalAnimationApi
 @Preview("Dark Theme", widthDp = 360, heightDp = 640)
 @Composable
 fun DarkPreview() {

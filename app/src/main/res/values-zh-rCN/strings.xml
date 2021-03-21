@@ -1,24 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name">玩天气</string>
+    <string name="app_name">玩天气</string>
     <string name="weather_sunny">晴</string>
-	<string name="weather_cloudy">多云</string>
-	<string name="weather_overcast">阴</string>
+    <string name="weather_cloudy">多云</string>
+    <string name="weather_overcast">阴</string>
     <string name="weather_small_rain">小雨</string>
-	<string name="weather_mid_rain">中雨</string>
-	<string name="weather_big_rain">大雨</string>
+    <string name="weather_mid_rain">中雨</string>
+    <string name="weather_big_rain">大雨</string>
 
-	<string name="weather_rainstorm">暴雨</string>
+    <string name="weather_rainstorm">暴雨</string>
     <string name="weather_small_snow">小雪</string>
 
-	<string name="weather_mid_snow">中雪</string>
-	<string name="weather_big_snow">大雪</string>
-	<string name="weather_snowstorm">暴风雪</string>
-	<string name="weather_foggy">雾</string>
+    <string name="weather_mid_snow">中雪</string>
+    <string name="weather_big_snow">大雪</string>
+    <string name="weather_snowstorm">暴风雪</string>
+    <string name="weather_foggy">雾</string>
 
     <string name="weather_ice">结冰</string>
-	<string name="weather_haze">阴霾</string>
+    <string name="weather_haze">阴霾</string>
 
-	<string name="weather_air_quality">空气质量</string>
+    <string name="weather_air_quality">空气质量</string>
+
+    <string name="city_new_york">纽约</string>
+    <string name="city_los_angeles">洛杉矶</string>
+    <string name="city_chicago">芝加哥</string>
+    <string name="city_houston">休斯敦</string>
+    <string name="city_san_francisco">旧金山</string>
+
+    <string name="basic_rain">降水概率：</string>
+    <string name="basic_humidity">湿度：</string>
+    <string name="basic_body_temperature">体感温度：</string>
+    <string name="basic_air_pressure">气压：</string>
+    <string name="basic_precipitation">降水量：</string>
+    <string name="basic_visibility">能见度：</string>
+    <string name="basic_ultraviolet_rays">紫外线指数：</string>
 
 </resources>

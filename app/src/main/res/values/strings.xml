@@ -31,4 +31,18 @@
 
     <string name="weather_air_quality">Air quality</string>
 
+    <string name="city_new_york">New York</string>
+    <string name="city_los_angeles">Los Angeles</string>
+    <string name="city_chicago">Chicago</string>
+    <string name="city_houston">Houston</string>
+    <string name="city_san_francisco">San Francisco</string>
+
+    <string name="basic_rain">Probability of precipitation:</string>
+    <string name="basic_humidity">Humidity:</string>
+    <string name="basic_body_temperature">Body temperature:</string>
+    <string name="basic_air_pressure">Air pressure:</string>
+    <string name="basic_precipitation">Precipitation:</string>
+    <string name="basic_visibility">Visibility:</string>
+    <string name="basic_ultraviolet_rays">UV index:</string>
+
 </resources>
