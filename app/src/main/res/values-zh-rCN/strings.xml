@@ -33,6 +33,5 @@
     <string name="basic_air_pressure">气压：</string>
     <string name="basic_precipitation">降水量：</string>
     <string name="basic_visibility">能见度：</string>
-    <string name="basic_ultraviolet_rays">紫外线指数：</string>
 
 </resources>

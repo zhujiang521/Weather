@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.example.androiddevchallenge.utils
 
 import android.widget.ProgressBar
@@ -65,7 +64,7 @@ fun SwipeToRefreshLayout(
         if (newValue && !refreshingState) onRefresh()
         true
     }
-    //Log.e(TAG, "SwipeToRefreshLayout: refreshDistance:$refreshDistance")
+    // Log.e(TAG, "SwipeToRefreshLayout: refreshDistance:$refreshDistance")
 
     Box(
         modifier = Modifier
@@ -90,7 +89,6 @@ fun SwipeToRefreshLayout(
                 progressIndicator()
             }
         }
-
 
         // TODO (https://issuetracker.google.com/issues/164113834): This state->event trampoline is a
         //  workaround for a bug in the SwipableState API. Currently, state.value is a duplicated
@@ -133,7 +131,7 @@ private val <T> SwipeableState<T>.PreUpPostDownNestedScrollConnection: NestedScr
                 performFling(velocity = toFling)
                 // since we go to the anchor with tween settling, consume all for the best UX
                 available
-                //Velocity.Zero
+                // Velocity.Zero
             } else {
                 Velocity.Zero
             }
@@ -153,7 +151,7 @@ private val <T> SwipeableState<T>.PreUpPostDownNestedScrollConnection: NestedScr
     }
 
 @Composable
-fun ProgressIndicator(){
+fun ProgressIndicator() {
     val context = LocalContext.current
     val progressBar = remember {
         ProgressBar(context).apply {
@@ -163,9 +161,9 @@ fun ProgressIndicator(){
     progressBar.indeterminateDrawable =
         AppCompatResources.getDrawable(LocalContext.current, R.drawable.loading_animation)
     AndroidView(
-        { progressBar }, modifier = Modifier
+        { progressBar },
+        modifier = Modifier
             .width(36.dp)
             .height(36.dp)
     ) {}
-
 }

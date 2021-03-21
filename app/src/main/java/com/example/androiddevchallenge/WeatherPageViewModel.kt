@@ -1,3 +1,18 @@
+/*
+ * Copyright 2021 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.example.androiddevchallenge
 
 import androidx.lifecycle.LiveData
@@ -11,7 +26,8 @@ import com.example.androiddevchallenge.utils.DateUtils
 import com.example.androiddevchallenge.utils.WeatherEnum
 import com.example.androiddevchallenge.utils.cityArray
 import com.example.androiddevchallenge.utils.getWeatherIcon
-import java.util.*
+import java.util.Calendar
+import java.util.Random
 
 class WeatherPageViewModel : ViewModel() {
 
@@ -68,7 +84,6 @@ class WeatherPageViewModel : ViewModel() {
         basicWeathers.add(BasicWeather(R.string.basic_precipitation, "${random.nextInt(50)} mm"))
         basicWeathers.add(BasicWeather(R.string.basic_air_pressure, "${random.nextInt(2000)} Hpa"))
         basicWeathers.add(BasicWeather(R.string.basic_visibility, "${random.nextInt(30)} Km"))
-        basicWeathers.add(BasicWeather(R.string.basic_ultraviolet_rays, "${random.nextInt(100)}"))
 
         val weather = Weather(
             weatherEnum.weather,
@@ -84,5 +99,4 @@ class WeatherPageViewModel : ViewModel() {
         onWeatherChanged(weather)
         return weather
     }
-
 }

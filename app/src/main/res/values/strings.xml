@@ -43,6 +43,5 @@
     <string name="basic_air_pressure">Air pressure:</string>
     <string name="basic_precipitation">Precipitation:</string>
     <string name="basic_visibility">Visibility:</string>
-    <string name="basic_ultraviolet_rays">UV index:</string>
 
 </resources>
