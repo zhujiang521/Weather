@@ -7,7 +7,7 @@
 ## :scroll: Description
 
 <!--- Describe your app in one or two sentences -->
-A beautiful simulation of the weather forecast application,I hope you like it!
+A beautiful simulation of the weather forecast application,I hope you like it! </br>
 <img src="/results/screen.gif" width="260">
 
 ## :bulb: Motivation and Context
