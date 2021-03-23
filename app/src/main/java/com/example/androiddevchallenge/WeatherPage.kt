@@ -58,9 +58,9 @@ fun WeatherPage() {
     val refreshingState = remember { mutableStateOf(REFRESH_STOP) }
     val weatherPageViewModel: WeatherPageViewModel = viewModel()
     val weather by weatherPageViewModel.weatherLiveData.observeAsState(Weather())
-    var loadArticleState by remember { mutableStateOf(false) }
-    if (!loadArticleState) {
-        loadArticleState = true
+    var loadState by remember { mutableStateOf(false) }
+    if (!loadState) {
+        loadState = true
         weatherPageViewModel.getWeather()
     }
 
@@ -73,7 +73,7 @@ fun WeatherPage() {
                 coroutineScope.launch {
                     delay(1000)
                     weatherPageViewModel.getWeather()
-                    loadArticleState = true
+                    loadState = true
                     refreshingState.value = REFRESH_STOP
                 }
             },
